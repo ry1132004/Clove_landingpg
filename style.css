@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background: #202020;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar .container {
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#logo{
+  height: 100px;
+  width: 150px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color:#f58220;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.show-nav {
+    display: flex;
+  }
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url(images/clinic.jpg);
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.hero-text {
+  width: 1rem;
+  font-size: 1rem;
+  margin-bottom:10px;
+  padding-left: 50px;
+  padding-top: 100px;
+  flex: 1;
+  min-width: 280px;
+  background-color: rgba(233, 225, 225, 0.3);
+  border-radius: 30%;
+}
+
+.hero-text h1 {
+  font-size: 1rem;
+  margin: 50px;
+}
+
+.hero-text button {
+  padding: 0.7rem 1.5rem;
+  background: #f58220;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.hero-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-form input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  border: 1px solid #f58220;
+  border-radius: 4px;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.checkbox-label input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.checkbox-label span {
+  white-space: nowrap; /* Force text to stay in one line */
+}
+
+
+.hero-form button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #f58220;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Treatments */
+.treatment-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  
+  padding: 1rem;
+  border-radius: 50%;
+  text-align: center;
+  max-width: 300px;
+}
+
+.card img {
+  width: auto;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #f58220;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.card a{
+  color: white;
+  text-decoration: none;
+}
+
+/* Transformations */
+.transformations {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #e09d62;
+}
+
+.transformations h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.person {
+  max-width: 200px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.person:hover {
+  transform: translateY(-5px);
+}
+
+.person img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.city {
+  font-size: 14px;
+  color:#f58220;
+}
+
+/* Why Clove */
+.why-clove ul {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.why-clove li {
+  margin: 0.5rem 0;
+  color: #f58220;
+  text-align: center;
+}
+
+.why-clove img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+/* Reviews */
+.review-box {
+  background: rgb(218, 136, 98);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+/* FAQs */
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem;
+  background: #f58220;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .treatment-cards,
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .person {
+    max-width: 90%;
+  }
+}
+
+/*chatbot*/
+.chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f58220;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chatbot-window {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.chatbot-window.active {
+  display: flex;
+}
+
+.chatbot-messages {
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.chatbot-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+  background: #f9f9f9;
+}
+
+.chatbot-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+.chatbot-input button {
+  padding: 10px 15px;
+  background-color: #ff6600;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*footer*/
+.footer{
+  background-color: #202020;
+  text-align: center;
+  color: #f58220;
+}
